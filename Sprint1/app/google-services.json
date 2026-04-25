@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "731710955780",
+    "project_id": "sprint1-cs2340-register",
+    "storage_bucket": "sprint1-cs2340-register.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731710955780:android:bdbc0f747b0abbd6a57051",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuj6KapNdiUOqpVyuW7WaA8jOioH63Hvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
