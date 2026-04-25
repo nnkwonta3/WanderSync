@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f0f0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/destination_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="0dp"
+            android:text="Destinations"
+            android:textSize="47sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_log_travel"
+            android:layout_width="209dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/login_button"
+            android:elevation="4dp"
+            android:text="Log Travel"
+            android:textColor="#fff" />
+
+        <LinearLayout
+            android:id="@+id/travel_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp"
+            android:background="@drawable/container_login"
+            android:elevation="4dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Travel Location TextBox -->
+            <TextView
+                android:id="@+id/tv_travel_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Travel Location:"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:textColor="#000"
+                android:paddingBottom="8dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_travel_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter travel location"
+                android:inputType="text"
+                android:padding="10dp"
+                android:background="#fff"
+                android:textColor="#000"/>
+
+            <!-- Estimated Start and End Dates -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <!-- Estimated Start -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_estimated_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Estimated Start:"
+                        android:textSize="16sp"
+                        android:textStyle="italic"
+                        android:textColor="#000"
+                        android:paddingBottom="8dp"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_estimated_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter start date"
+                        android:inputType="date"
+                        android:padding="10dp"
+                        android:background="#fff"
+                        android:textColor="#000"/>
+                </LinearLayout>
+
+                <!-- Estimated End -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_estimated_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Estimated End:"
+                        android:textSize="16sp"
+                        android:textStyle="italic"
+                        android:textColor="#000"
+                        android:paddingBottom="8dp"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_estimated_end"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter end date"
+                        android:inputType="date"
+                        android:padding="10dp"
+                        android:background="#fff"
+                        android:textColor="#000"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Cancel and Submit Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:background="@drawable/login_button"
+                    android:textColor="#fff"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Submit"
+                    android:background="@drawable/create_account_button"
+                    android:textColor="#fff"
+                    android:layout_marginStart="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/calculate_vacation_time_btn"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/login_button"
+            android:elevation="4dp"
+            android:text="Calculate Vacation Time"
+            android:textColor="#fff" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_destinations"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="8dp"/>
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:visibility="visible"
+        app:itemBackground="@color/black"
+        app:menu="@menu/menu_navigation" />
+
+</LinearLayout>
+
+
+

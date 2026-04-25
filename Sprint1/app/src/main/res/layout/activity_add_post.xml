@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/container_login"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/welcome_to_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="New Travel Post"
+                android:textColor="#000"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/start_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:text="Start:"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Enter start date/time">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enter_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="datetime"
+                    android:textColor="#000"
+                    android:padding="10dp"
+                    android:background="#fff"
+                    android:hint="Enter start date/time"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/end_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:text="End:"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="Enter end date/time">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enter_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="datetime"
+                    android:textColor="#000"
+                    android:padding="10dp"
+                    android:background="#fff"
+                    android:hint="Enter end date/time"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/destination_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:text="Destination:"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:hint="Enter destination">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enter_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#000"
+                    android:padding="10dp"
+                    android:background="#fff"
+                    android:hint="Enter destination"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/accommodations_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:text="Accommodations:"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enter_accommodations"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:textColor="#000"
+                    android:padding="10dp"
+                    android:background="#fff"
+                    android:scrollbars="vertical"
+                    android:hint="Enter accommodation details"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/dining_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:text="Dining Reservations:"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enter_dining"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:textColor="#000"
+                    android:padding="10dp"
+                    android:background="#fff"
+                    android:scrollbars="vertical"
+                    android:hint="Enter dining reservation details"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/notes_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:text="Notes:"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enter_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:textColor="#000"
+                    android:padding="10dp"
+                    android:background="#fff"
+                    android:scrollbars="vertical"
+                    android:hint="Enter additional notes"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_travel_post_button"
+                android:layout_width="253dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="21dp"
+                android:background="@drawable/create_account_button"
+                android:elevation="4dp"
+                android:text="Add Travel Post"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

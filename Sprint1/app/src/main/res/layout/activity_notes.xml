@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.Notes">
+
+    <!-- Title for the notes section -->
+    <TextView
+        android:id="@+id/tv_notes_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notes"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_notes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_notes_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/view_divider"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"/>
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_add_note"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:id="@+id/tv_add_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Note"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/recycler_notes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/et_note_input"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/et_note_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Type your note here"
+        android:inputType="text"
+        android:maxLines="5"
+        android:gravity="top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_submit_note"
+        android:padding="8dp"
+        android:background="@android:drawable/edit_text"/>
+
+    <Button
+        android:id="@+id/btn_submit_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Note"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:visibility="visible"
+        app:itemBackground="@color/black"
+        app:menu="@menu/menu_navigation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/container_login"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/welcome_to_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="New Reservation"
+            android:textColor="#000"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:text="Time:"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Enter time">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enter_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:background="#fff"
+                android:hint="Enter time"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/location_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:text="Location:"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Enter location">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enter_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:background="#fff"
+                android:hint="Enter location"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/website_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:text="Website:"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:hint="Enter website">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enter_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:background="#fff"
+                android:hint="Enter restaurant"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/restaurant_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:text="Restaurant:"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:hint="Enter restaurant">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/enter_restaurant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:background="#fff"
+                android:hint="Enter restaurant"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_reservation_button"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/create_account_button"
+            android:elevation="4dp"
+            android:text="Add Reservation"
+            android:layout_marginBottom="21dp"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f0f0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/destination_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Destinations"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="#000" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_log_travel"
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/login_button"
+            android:elevation="4dp"
+            android:text="Log Travel"
+            android:textColor="#fff" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/calculate_vacation_time_btn"
+            android:layout_width="253dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/create_account_button"
+            android:elevation="4dp"
+            android:text="Calculate Vacation Time"
+            android:textColor="#fff" />
+
+        <LinearLayout
+            android:id="@+id/travel_info_container"
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/container_login"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <!-- Start Date -->
+            <TextView
+                android:id="@+id/tv_start_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:text="Start Date:"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:hint="Enter start date"
+                android:inputType="date"
+                android:padding="10dp"
+                android:textColor="#000" />
+
+            <!-- End Date -->
+            <TextView
+                android:id="@+id/tv_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:text="End Date:"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_end_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:hint="Enter end date"
+                android:inputType="date"
+                android:padding="10dp"
+                android:textColor="#000" />
+
+            <!-- Duration -->
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:text="Duration:"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:hint="Enter duration"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#000" />
+
+            <!-- Cancel Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_calculate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_button"
+                    android:text="Calculate"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_destinations"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="8dp"/>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:visibility="visible"
+        app:itemBackground="@color/black"
+        app:menu="@menu/menu_navigation" />
+
+</LinearLayout>

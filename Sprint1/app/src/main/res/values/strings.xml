@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="logistics_screen">Logistics Screen</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="username">Username:</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="logout">Logout</string>
+    <string name="start">Start</string>
+    <string name="splash_page">Splash Page</string>
+    <string name="accomodations" />
+    <string name="dining">dining</string>
+    <string name="travelcommunity">travelcommunity</string>
+    <string name="logistics">logistics</string>
+    <string name="destinations">destinations</string>
+    <string name="title_activity_log_vacation">LogVacation</string>
+</resources>
